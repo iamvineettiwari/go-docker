@@ -331,16 +331,6 @@ func (dm *DockerManager) fetchLayers(manifest *LayerManifest) (string, error) {
 			return "", err
 		}
 
-		// cmd := exec.Command("cp", "-r", extractDirectory+"/usr/bin", extractDirectory)
-		// cmd.Run()
-
-		// filepath.Walk(extractDirectory+"/bin", func(path string, info os.FileInfo, err error) error {
-		// 	if err != nil {
-		// 		return err
-		// 	}
-		// 	return os.Chmod(path, 0777)
-		// })
-
 		log.Printf("Extracted layer - %s (%d/%d) \n", layer.Digest, idx+1, len(manifest.Layers))
 	}
 
