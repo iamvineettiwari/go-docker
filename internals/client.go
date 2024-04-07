@@ -83,11 +83,3 @@ func (c *Client) Run(args []string) {
 		}
 	}
 }
-
-func DoesNotExists(path string) bool {
-	if _, err := os.Stat(path); err != nil {
-		return os.IsNotExist(err)
-	}
-
-	return false
-}
